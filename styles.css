@@ -1,0 +1,65 @@
+body {
+  font-family: Times New Roman, sans-serif;
+  background-color: #f2f2f7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111184;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #f5f6f8;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #f6f2f2;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f7f9fa;
+}
+
+.year-list,
+.other-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.year-list li,
+.other-links li {
+  margin-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #f7f8f9;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 0.67em;
+  color: #000;
+  margin-top: 40px;
+  text-align: left;
+}
