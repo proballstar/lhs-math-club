@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lynbrook Computer Science Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #2eb872;
+      --blue: #001f3f;
+      --white: #ffffff;
+      --text-dark: #0f172a;
+      --text-light: #f8fafc;
+      --accent: #0ea5e9;
+      --radius: 14px;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif; /* Apply Inter globally */
+      color: var(--text-dark);
+      background: #f3f4f6;
+      line-height: 1.7;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      max-width: 980px;
+      width: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .panel {
+      padding: 28px;
+      min-height: 300px;
+    }
+
+    .panel--green {
+      background: linear-gradient(135deg, #2eb872, #24a564);
+      color: var(--text-light);
+    }
+
+    .panel--blue {
+      background: linear-gradient(135deg, #001f3f, #001a33);
+      color: var(--text-light);
+    }
+
+    h2, h3 {
+      margin: 0 0 14px;
+      letter-spacing: 0.2px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      opacity: 0.9;
+      margin-top: 14px;
+    }
+
+    .list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      margin: 6px 0;
+    }
+
+    .role {
+      font-weight: 700;
+      opacity: 0.95;
+    }
+
+    .name {
+      opacity: 0.95;
+    }
+
+    .about p {
+      margin: 0 0 10px;
+      max-width: 62ch;
+    }
+
+    .contact {
+      background: var(--white);
+      color: var(--text-dark);
+      padding: 22px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .contact p {
+      margin: 0;
+      flex: 1 1 auto;
+      min-width: 260px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 700;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--accent), #0284c7);
+      box-shadow: 0 6px 14px rgba(2, 132, 199, 0.25);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.06s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25); }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      .panel { min-height: unset; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-labelledby="club-title">
+    <div class="grid">
+      <!-- Left Panel (Green) -->
+      <section class="panel panel--green" aria-label="Officers">
+        <h2 id="club-title">Officers</h2>
+        <ul class="list">
+          <li><span class="role">President:</span> <span class="name">Matthew Xia</span></li>
+          <li><span class="role">Vice Presidents:</span> <span class="name">Brian Law, Shresth Mishra</span></li>
+          <li><span class="role">Secretary:</span> <span class="name">Justin Ji</span></li>
+          <li><span class="role">Treasurer:</span> <span class="name">Henry Wang</span></li>
+        </ul>
+      </section>
+
+      <!-- Right Panel (Blue) -->
+      <section class="panel panel--blue about" aria-label="About Us">
+        <h2>About Us</h2>
+        <p>Lynbrook Computer Science is an interest group for students of Lynbrook High School. Our club is open to all, regardless of background.</p>
+        <p>Everyone, ranging from curious non-programmers to experienced competitive programmers, has something to gain from participating. We provide weekly informational lectures and fun and engaging problems for everyone to solve.</p>
+        <p>Members are also highly encouraged to share anything with the club, such as computer science related projects they have made.</p>
+      </section>
+    </div>
+
+    <!-- Bottom Section (White) -->
+    <section class="contact" aria-label="Contact Us">
+      <p><strong>Contact Us:</strong> If you have any questions or comments, feel free to contact us at <a href="mailto:lynbrookcsclub@gmail.com">lynbrookcsclub@gmail.com</a>.</p>
+      <a class="btn" href="mailto:lynbrookcsclub@gmail.com">Click here to Contact</a>
+    </section>
+  </main>
+</body>
+</html>
